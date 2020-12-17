@@ -42,7 +42,12 @@ var app = new Vue(
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result)=> {
                 this.discs = result.data.response;
-                // console.info(this.discs);
+                // console.info("Array normale", this.discs);
+
+                this.discs.sort(function(a, b){
+                    return a.year-b.year
+                })
+                // console.info("Array sorted", this.discs);
 
                 this.getGenreList();
             });
