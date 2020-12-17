@@ -34,6 +34,23 @@ nav > h1 {
 /* NAV */
 
 /* MAIN */
+
+/* filters */
+.filters {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* /filters */
+
+/* cards */
 main {
     width: 100%;
     height: calc(100% - 80px);
@@ -95,5 +112,7 @@ main {
     font-size: 18px;
     color: #b6b6b6;
 }
+
+/* /cards */
 
 /* /MAIN */

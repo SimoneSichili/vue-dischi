@@ -20,8 +20,21 @@ var app = new Vue(
         el: '#root',
         data: {
             discs: [],
+            genreList: [],
+            selected: "all",
         },
         methods: {
+            getGenreList: function() {
+                this.discs.forEach(
+                    element => {
+                        // console.log(element);
+                        if(this.genreList.includes(element.genre) == false) {
+                            this.genreList.push(element.genre);
+                        }
+                    }
+                );
+                // console.log(this.genreList);
+            },
         },
         mounted: function() {
 
@@ -29,8 +42,12 @@ var app = new Vue(
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result)=> {
                 this.discs = result.data.response;
-                console.info(this.discs);
+                // console.info(this.discs);
+
+                this.getGenreList();
             });
+
+            
 
         },
     }
