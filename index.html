@@ -27,29 +27,32 @@
 
         <main>
 
-            <div class="filters">
-                <label for="albums-filter">Scegli un genere</label>
-
-                <select id="albums-filter" v-model="selected">
-                    <option value="all">Tutti</option>
-                    <option v-for="(genre, index) in genreList" :value="genre">{{genre}}</option>
-                </select>
-            </div>
-
-            <h2 class="section-title">Albums</h2>
-            <div class="cards-container">
-                <div v-if="selected == disc.genre || selected == 'all'" v-for="disc in discs" class="card">
-                    <div class="card-top">
-                        <img :src="disc.poster" alt="disc.title">
-                        <h3 class="title">{{disc.title}}</h3>
-                    </div>
-                    <div class="card-bottom">
-                        <span class="author">{{disc.author}}</span>
-                        <span class="year">{{disc.year}}</span>
-                    </div>
+            <div class="wrapper">
+                <div class="filters">
+                    <label for="albums-filter">Scegli un genere</label>
+    
+                    <select id="albums-filter" v-model="selected">
+                        <option value="all">Tutti</option>
+                        <option v-for="(genre, index) in genreList" :value="genre">{{genre}}</option>
+                    </select>
                 </div>
-
-            </div> 
+    
+                <h2 class="section-title">Albums</h2>
+                <div class="cards-container">
+                    <div v-if="selected == disc.genre || selected == 'all'" v-for="disc in discs" class="card">
+                        <div class="card-top">
+                            <img :src="disc.poster" alt="disc.title">
+                            <h3 class="title">{{disc.title}}</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <span class="author">{{disc.author}}</span>
+                            <span class="year">{{disc.year}}</span>
+                        </div>
+                    </div>
+    
+                </div> 
+            </div>
+            
         </main>
         
     </div>

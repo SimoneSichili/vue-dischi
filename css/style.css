@@ -12,6 +12,7 @@
     height: 100vh;
 }
 
+
 /* NAV */
 nav {
     display: flex;
@@ -54,13 +55,20 @@ nav > h1 {
 main {
     width: 100%;
     height: calc(100% - 80px);
-    padding: 50px 200px;
+    padding: 50px 0;
     background-color: #121212;
     overflow-y: auto;
 }
 
+.wrapper {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 20px;
+}
+
 .section-title {
     margin-bottom: 20px;
+    padding-left: 10px;
     color: #fff;
 }
 
@@ -76,7 +84,7 @@ main {
     justify-content: space-between;
     width: calc(100% / 5 - 20px);
     height: 450px;
-    margin-right: 20px;
+    margin: 0 10px;
     margin-bottom: 30px;
     padding: 20px;
     text-align: center;
@@ -116,3 +124,89 @@ main {
 /* /cards */
 
 /* /MAIN */
+
+@media screen and (max-width: 1400px) {
+
+    .card {
+        height: 400px;
+    }
+
+    .card-top > h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .card {
+        height: 350px;
+    }
+
+    .card-top > h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .card {
+        width: calc(100% / 3 - 20px);
+        height: 450px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .card:nth-child(5n + 5) {
+        margin-right: 10px;
+    }
+
+    .card:nth-child(3n + 3) {
+        margin-right: 0;
+    }
+
+    .card-top > h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .card {
+        height: 350px;
+    }
+
+    .card-top > h3 {
+        font-size: 16px;
+    }
+
+    .card-bottom > span {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .card {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .card {
+        width: calc(100% / 2 - 20px);
+        height: 400px;
+    }
+
+    .card:nth-child(5n + 5) {
+        margin-right: 10px;
+    }
+
+    .card:nth-child(3n + 3) {
+        margin-right: 10px;
+    }
+
+    .card:nth-child(2n + 2) {
+        margin-right: 0;
+    }
+}
